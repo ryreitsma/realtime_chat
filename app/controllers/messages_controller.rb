@@ -6,8 +6,8 @@ class MessagesController < ApplicationController
   end
   
   def write
-    message = current_user.write_message(params[:message][:content])
-    redirect_to 'http://localhost:3002/messages/index'
+    message = current_user.write_message(params['content'])
+    redirect_to 'http://localhost:3000/messages/index'
   end
   
   def message

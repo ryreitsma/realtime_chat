@@ -1,5 +1,5 @@
 app.factory('eventsource', function ($rootScope) {
-  var eventSource = new EventSource('http://localhost:3002/push/message');
+  var eventSource = new EventSource('http://localhost:3000/push/message');
   return {
     on: function (eventName, callback) {
       eventSource.addEventListener(eventName, function (e) {  

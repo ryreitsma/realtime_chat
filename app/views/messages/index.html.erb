@@ -1,10 +1,10 @@
 <div id="messages" data-ng-controller="MessagesController" data-messages='<%= render template: 'messages/messages.rabl', collection: @messages %>'>
-<%= form_for Message.new, url: write_message_url do |f| %>
-  <fieldset>
-		<%= f.label :content %>
-		<%= f.text_area :content, rows: 4 %>
-		<%= f.submit "Send", class: "btn btn-primary" %> 
-  </fieldset> 
+<%= form_tag write_message_url, id: 'message_form'  do%>
+  <%= content_tag :fieldset do %> 
+		<%= label_tag :content, "Schrijf een bericht" %>
+		<%= text_area_tag :content, nil, rows: 4 %>
+		<%= submit_tag "Versturen", class: "btn btn-primary" %> 
+  <% end %> 
 <% end %>
 
   <div class="row" data-ng-repeat="message in messages">
