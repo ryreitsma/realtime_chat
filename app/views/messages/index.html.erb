@@ -1,0 +1,22 @@
+<div id="messages" data-ng-controller="MessagesController" data-messages='<%= render template: 'messages/messages.rabl', collection: @messages %>'>
+<%= form_for Message.new, url: write_message_url do |f| %>
+  <fieldset>
+		<%= f.label :content %>
+		<%= f.text_area :content, rows: 4 %>
+		<%= f.submit "Send", class: "btn btn-primary" %> 
+  </fieldset> 
+<% end %>
+
+  <div class="row" data-ng-repeat="message in messages">
+		<div class="span4">
+		  <div class="row">
+				<div class="span1">
+					<img data-ng-src="{{ message.user.avatar_url}}" alt="avatar"/>
+				</div>  
+				<div class="span2">{{ message.user.name }} </div>
+			</div>
+		</div>
+		<div class="span6">{{ message.content }}</div>
+	</div>
+</div>
+  
