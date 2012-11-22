@@ -12,7 +12,7 @@ class Proxy < Goliath::API
   end
 
   def response(env)
-    params = {:head => env['client-headers'], :query => env.params}
+    params = {:headers => env['client-headers'], :query => env.params}
     
     proxy_host = "http://localhost:3002"
     
