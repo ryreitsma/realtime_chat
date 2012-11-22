@@ -1,5 +1,4 @@
 class MessagePublisher < ActiveRecord::Observer
-  include Rails.application.routes.url_helpers
   observe :message
     
   def after_create(message)

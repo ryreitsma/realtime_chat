@@ -9,11 +9,5 @@ class MessagesController < ApplicationController
   def write
     message = current_user.write_message(params['content'])
     render text: 'OK'
-  end
-  
-  def message
-    message = Message.find(params[:message_id])
-    render partial: "message", message: message
-  end
-          
+  end            
 end

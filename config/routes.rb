@@ -1,8 +1,6 @@
 RealtimeChatWeb::Application.routes.draw do
   devise_for :users
 
-  resources :users
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,7 +53,6 @@ RealtimeChatWeb::Application.routes.draw do
   root :to => 'messages#index'
   match 'messages/write' => 'messages#write', :as => :write_message
   match 'messages/index' => 'messages#index'
-  match 'messages/:message_id/show' => 'message#show', :as => :message
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
