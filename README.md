@@ -11,7 +11,7 @@ Most easy way of trying this out is to use a Fedora Linux VM and run 'yum instal
 
 2. Run the webapplication
 
-In the root of the application, run 'bundle' to install all gems for the webapplication. Then run 'bundle exec rake db:create db:schema:load' to create the sqlite database. Run 'rails server', the webapplication will now run on http://localhost:3000
+In the root of the application, run 'bundle' to install all gems for the webapplication. Then run 'bundle exec rake db:create db:schema:load' to create the sqlite database. Run 'rails server', the webapplication will now run on http://localhost:3000. Note: if the bundle command is unknown, run 'gem install bundler'. 
 
 3. Run the realtime application
 
