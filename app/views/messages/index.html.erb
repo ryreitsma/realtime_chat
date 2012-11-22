@@ -1,13 +1,13 @@
 <div id="messages" data-ng-controller="MessagesController" data-messages='<%= render template: 'messages/messages.rabl', collection: @messages %>'>
-<%= form_tag write_message_url, id: 'message_form'  do%>
-  <%= content_tag :fieldset do %> 
-		<%= label_tag :content, "Schrijf een bericht" %>
-		<%= text_area_tag :content, nil, rows: 4 %>
-		<%= submit_tag "Versturen", class: "btn btn-primary" %> 
-  <% end %> 
-<% end %>
+<form >
+  <fieldset>
+    <label for="content">Schrijf een bericht</label>
+		<textarea id="content" data-ng-model="message.content" rows="4"></textarea>
+		<input type="button" value="Versturen" class="btn btn-primary" data-ng-click="sendMessage(message)"/> 
+  </fieldset>
+</form>
 
-  <div class="row" data-ng-repeat="message in messages">
+  <div class="row" data-ng-repeat="message in messages | orderBy:orderProp:true">
 		<div class="span4">
 		  <div class="row">
 				<div class="span1">

@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_filter :authenticate_user!
+  skip_before_filter :verify_authenticity_token
   
   def index
     @messages = Message.order("created_at DESC")
@@ -7,7 +8,7 @@ class MessagesController < ApplicationController
   
   def write
     message = current_user.write_message(params['content'])
-    redirect_to 'http://localhost:3000/messages/index'
+    render text: 'OK'
   end
   
   def message
