@@ -7,7 +7,6 @@ gem 'rails', '3.2.9'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,12 +25,6 @@ gem 'devise'
 gem 'redis'
 gem 'dalli'
 gem 'thin'
-#gem 'cramp', :git => 'git://github.com/bebac/cramp.git'
-#gem 'http_router'
-#gem 'async-rack'
-#gem 'em-hiredis'
-
-
 gem 'yajl-ruby'
 
 # To use ActiveModel has_secure_password
@@ -41,7 +34,7 @@ gem 'yajl-ruby'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
