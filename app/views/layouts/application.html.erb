@@ -10,7 +10,7 @@
 <div class="container" data-ng-app="chat">
  <p class="text-info"><%= notice %></p>
  <p class="text-error"><%= alert %></p>
- <div style="float: right;">
+ <div>
  <% if user_signed_in? %>
   Logged in as <strong><%= current_user.name %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path %> |

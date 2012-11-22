@@ -8,7 +8,7 @@
 </form>
 
   <div class="row" data-ng-repeat="message in messages | orderBy:orderProp:true">
-		<div class="span4">
+		<div class="span1">
 		  <div class="row">
 				<div class="span1">
 					<img data-ng-src="{{ message.user.avatar_url}}" alt="avatar"/>
@@ -16,7 +16,7 @@
 				<div class="span2">{{ message.user.name }} </div>
 			</div>
 		</div>
-		<div class="span6">{{ message.content }}</div>
+		<div class="span4">{{ message.content }}</div>
 	</div>
 </div>
   
