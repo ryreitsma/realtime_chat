@@ -20,7 +20,7 @@ Having problems running the Rails application? Want to know how it works or chan
 
 Go to the cramp_app directory, run 'bundle' to install all gems for the realtime application. Run 'bundle exec thin -p 3001 --max-persistent-conns 1024 --timeout 0 -R config.ru start', the realtime application will now run on http://localhost:3001
 
-Want to know more about Cramp realtime webapps? See cramp.in to read more about this webframework.
+Want to know more about Cramp realtime webapps? See http://cramp.in/ to read more about this webframework.
 
 ## Thanks
 
