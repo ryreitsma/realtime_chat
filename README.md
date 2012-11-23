@@ -1,5 +1,4 @@
-realtime_chat
-=============
+# Realtime chat webapplication
 
 An experimental chat application using Ruby on Rails 3.2, Cramp, Redis, Thin and Angular.js. It demonstrates how you can easily add real-time capabilities to a (non-realtime synchronous) Rails application, using a chain of open source components. 
 
@@ -9,11 +8,13 @@ To run this application you need to have Ruby 1.9, Memcached and Redis installed
 
 Most easy way of trying this out is to use a Fedora Linux VM and run 'yum install rvm redis memcached'. Then run 'rvm install ruby-1.9.3' and you're almost ready to go. Installing redis and memcached from packages will set them as system services and start them. Both need to run, so check with 'ps aux' if that's the case. If not, run 'sudo service redis start' and 'sudo service memcached start'.
 
+
 2. Run the webapplication
 
 In the root of the application, run 'bundle' to install all gems for the webapplication. Then run 'bundle exec rake db:create db:schema:load' to create the sqlite database. Run 'rails server', the webapplication will now run on http://localhost:3000. Note: if the bundle command is unknown, run 'gem install bundler'. 
 
 Having problems running the Rails application? Want to know how it works or change the behaviour? Check http://rubyonrails.org/ for more info.
+
 
 3. Run the realtime application
 
